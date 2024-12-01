@@ -4,7 +4,7 @@ import javax.annotation.PostConstruct;
 
 public class BeanDemo {
 
-    {
+    static {
         System.out.println("This message comes from initializer block of BeanDemo");
     }
 
