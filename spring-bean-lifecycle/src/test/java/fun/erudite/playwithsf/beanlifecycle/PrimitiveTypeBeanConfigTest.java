@@ -26,14 +26,26 @@ class PrimitiveTypeBeanConfigTest {
     }
 
     @Test
-    void integerTypedBean() {
-        Integer integerTypedBean = ctx.getBean("integerTypedBean", Integer.class);
+    void get_integerTypedBean_via_beanType() {
+        Integer integerTypedBean = ctx.getBean(Integer.class);
         System.out.println(integerTypedBean);
     }
 
     @Test
-    void floatTypedBean() {
-        Float floatTypedBean = ctx.getBean("floatTypedBean", Float.class);
+    void get_integerTypedBean_via_beanName_beanType() {
+        Integer integerTypedBean = ctx.getBean("integerTypedBean",Integer.class);
+        System.out.println(integerTypedBean);
+    }
+
+    @Test
+    void get_floatTypedBean_via_beanType() {
+        Float floatTypedBean = ctx.getBean(Float.class);
+        System.out.println(floatTypedBean);
+    }
+
+    @Test
+    void get_floatTypedBean_via_beanName_beanType() {
+        Float floatTypedBean = ctx.getBean("floatTypedBean",Float.class);
         System.out.println(floatTypedBean);
     }
 
