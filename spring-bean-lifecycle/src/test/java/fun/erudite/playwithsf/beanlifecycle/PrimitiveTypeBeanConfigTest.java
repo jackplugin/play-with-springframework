@@ -6,8 +6,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.text.MessageFormat;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class PrimitiveTypeBeanConfigTest {
     private AnnotationConfigApplicationContext ctx;
@@ -37,5 +35,11 @@ class PrimitiveTypeBeanConfigTest {
     void floatTypedBean() {
         Float floatTypedBean = ctx.getBean("floatTypedBean", Float.class);
         System.out.println(floatTypedBean);
+    }
+
+    @AfterAll
+    void afterAll() {
+        System.out.println("Close the current AnnotationConfigApplicationContext in afterAll() method.");
+        ctx.close();
     }
 }
