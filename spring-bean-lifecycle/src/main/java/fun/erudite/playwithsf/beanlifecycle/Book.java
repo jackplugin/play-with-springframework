@@ -1,10 +1,7 @@
-# play-with-springframework
-A repository to record everything I have learned during my self-study journey with the Spring Framework.
+package fun.erudite.playwithsf.beanlifecycle;
 
-## Takeaways of defining beans via @Component
+import org.springframework.stereotype.Component;
 
-### We can use @Component to annotate a class to make it as spring managed bean
-```java
 @Component
 public class Book {
     private String title;
@@ -38,4 +35,3 @@ public class Book {
                 '}';
     }
 }
-```
