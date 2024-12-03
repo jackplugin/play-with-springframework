@@ -39,3 +39,11 @@ public class Book {
     }
 }
 ```
+
+### To make Spring aware of Classes annotated by @Component, we need to tell Spring in which package these Classes reside
+```java
+@Configuration
+@ComponentScan(basePackages = "fun.erudite.playwithsf.beanlifecycle" )
+public class AppConfig {
+}
+```
