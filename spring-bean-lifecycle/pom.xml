@@ -24,8 +24,16 @@
                 <artifactId>spring-framework-bom</artifactId>
                 <version>6.2.0</version>
                 <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
